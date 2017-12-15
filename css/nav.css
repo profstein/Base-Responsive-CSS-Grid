@@ -1,4 +1,11 @@
 /* Base Styles */
+/* Use border-box box-sizing. This isn't strictly necessary with CSS Grid but can be helpful if you're using a float fallback and it tends to be more intuitive.*/
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
 
 
 /* This adds a transition to all links. It is optional. */
@@ -18,7 +25,7 @@ a {
     position: relative;
     width: 100%;
     background-color: #555; /* change to your preferred color */
-
+    
     /* In order to keep your text vertically centered in the header you will need to keep the height and line height the same */
     height: 4em;
     line-height: 4em;
@@ -29,12 +36,9 @@ a {
 /* Styling for Site title and logo. It is not required to have a logo, but you should have a title. */
 
 .logo {
-    font-family: 'Barlow Condensed', sans-serif;
-    font-weight: 400;
-    font-size: 2em; /* change this to be the font-size you want for Site title */
-    line-height: inherit;
-    margin: 0 0 0 1em; /*puts a margin on the left only */
-/*    margin-left: 1em;*/
+    font-family: inherit;
+    font-size: 1.5em; /* change this to be the font-size you want for Site title */
+    margin-left: 1em;
 }
 
 .logo a {
@@ -67,7 +71,6 @@ a {
 }
 
 .navbar {
-    position: relative;
     background-color: #555; /* change to your preferred color */
     float: none;
     max-height: 0;
@@ -77,8 +80,6 @@ a {
     -o-transition: max-height 0.6s;
     -webkit-transition: max-height 0.6s;
     transition: max-height 0.6s;
-
-    z-index: 8004000;
 }
 
 .navbar .menu {
@@ -116,7 +117,7 @@ a {
 
 /* This changes the styling on larger screens. Adjust the min-width if you want the nav to change at a different screen width */
 
-@media only screen and (min-width: 1634px) {
+@media only screen and (min-width: 48em) {
     .header {
         padding-left: 1em;
         padding-right: 1em;
@@ -145,10 +146,16 @@ a {
         display: block;
         border-bottom: 0;
     }
-
-/*    stop floating on next section*/
-    .place{
+    
+    /*    stop floating on next section*/
+/*    Find the next block level element after the nav and put a clear:both on it. Example Below*/
+/*
+    .main{
         clear:both;
     }
+*/
+    
+    
+    
 }
 /* end large screen nav styling. */
