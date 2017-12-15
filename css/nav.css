@@ -1,0 +1,154 @@
+/* Base Styles */
+
+
+/* This adds a transition to all links. It is optional. */
+a {
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+
+/* Navigation Styles */
+
+
+/* Header */
+.header {
+    position: relative;
+    width: 100%;
+    background-color: #555; /* change to your preferred color */
+
+    /* In order to keep your text vertically centered in the header you will need to keep the height and line height the same */
+    height: 4em;
+    line-height: 4em;
+    border-bottom: 3px solid #000; /* change to your preferred color */
+}
+
+
+/* Styling for Site title and logo. It is not required to have a logo, but you should have a title. */
+
+.logo {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 400;
+    font-size: 2em; /* change this to be the font-size you want for Site title */
+    line-height: inherit;
+    margin: 0 0 0 1em; /*puts a margin on the left only */
+/*    margin-left: 1em;*/
+}
+
+.logo a {
+    color: #fff; /* change to your preferred color */
+    text-decoration: none;
+}
+
+.logo a:hover {
+    color: #ddd; /* change to your preferred color */
+}
+
+
+/* Mobile menu */
+
+#menu-icon {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 1em;
+    color: #fff; /* change to your preferred color */
+    text-decoration: none;
+    cursor: pointer;
+    padding: 0 0.4em;
+}
+
+#menu-icon:hover {
+    color: #ddd; /* change to your preferred color */
+    text-decoration: none;
+    border: none;
+}
+
+.navbar {
+    position: relative;
+    background-color: #555; /* change to your preferred color */
+    float: none;
+    max-height: 0;
+    overflow: hidden;
+    /*    This makes it slide down. Bigger numbers make it slide slower */
+    -moz-transition: max-height 0.6s;
+    -o-transition: max-height 0.6s;
+    -webkit-transition: max-height 0.6s;
+    transition: max-height 0.6s;
+
+    z-index: 8004000;
+}
+
+.navbar .menu {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.navbar .menu li {
+    list-style-type: none;
+    display: block;
+}
+
+.navbar .menu li a {
+    display: block;
+    text-decoration: none;
+    color: #fff; /* change to your preferred color */
+    padding: 0 0.8em;
+    border-bottom: 1px solid #fff; /* change to your preferred color */
+}
+
+.navbar .menu li a:hover {
+    background-color: #67df67; /* change to your preferred color */
+}
+
+.navbar .menu li a.active {
+    background-color: #13d913; /* change to your preferred color */
+}
+
+.expand {
+    max-height: 100em;
+    /* this gives the nav height and expands it */
+}
+
+
+/* This changes the styling on larger screens. Adjust the min-width if you want the nav to change at a different screen width */
+
+@media only screen and (min-width: 1634px) {
+    .header {
+        padding-left: 1em;
+        padding-right: 1em;
+    }
+    .logo {
+        margin-left: 0;
+    }
+    .logo,
+    .navbar {
+        display: inline-block;
+    }
+    /* Mobile menu icon */
+    #menu-icon {
+        display: none;
+    }
+    .navbar {
+        float: right;
+        max-height: 100%;
+    }
+    .navbar .menu li {
+        list-style-type: none;
+        display: inline-block;
+        text-align: center;
+    }
+    .navbar .menu li a {
+        display: block;
+        border-bottom: 0;
+    }
+
+/*    stop floating on next section*/
+    .place{
+        clear:both;
+    }
+}
+/* end large screen nav styling. */
