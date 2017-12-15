@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Site Title</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/nav.css">
+</head>
+
+<body>
+    <header class="header">
+        <h1 class="logo"><a href="index.html">Site Title</a></h1> <a id="menu-icon">&#9776; Menu</a>
+        <nav class="navbar">    
+            <ul class="menu">
+                <li><a class="active" href="index.html">Home</a></li>
+                <li><a href="page.html">Page</a></li>
+
+            </ul>
+        </nav>
+    </header>
+    
+    
+    <article class="main grid">
+        
+        
+    </article>
+    
+    
+    <footer>
+        
+    </footer>
+    
+    
+    <!--    This is javascript needed for the navigation to work-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function () {
+            $('#menu-icon').on('click', function () {
+                $('.navbar').toggleClass('expand');
+                return false;
+            });
+        });
+    </script>
+</body>
+
+</html>
